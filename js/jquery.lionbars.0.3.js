@@ -130,7 +130,6 @@
       }
     });
     // Core functions
-
     function setEvents(elem) {
       var el = $(elem);
       if (addVScroll || addHScroll) {
@@ -229,7 +228,6 @@
         });
       }
     }
-
     function setScrollRatios(elem) {
       vRatio = (offsetHeight - $(elem).find('.lb-wrap').get(0).scrollHeight - borderTop - borderBottom) / (vLbHeight - vSliderHeight);
       hRatio = (offsetWidth - $(elem).find('.lb-wrap').get(0).scrollWidth - borderLeft - borderRight) / (hLbHeight - hSliderHeight);
@@ -237,7 +235,6 @@
       el.attr('vratio', vRatio);
       el.attr('hratio', hRatio);
     }
-
     function setSlidersHeight(elem) {
       var el = $(elem);
       var hmin, hmax, gap;
@@ -262,7 +259,6 @@
         "width": hSliderHeight
       });
     }
-
     function resetVars() {
       vScrollWidth = 0;
       hScrollWidth = 0;
@@ -289,7 +285,6 @@
       vLbHeight = 0;
       hLbHeight = 0;
     }
-
     function reduceScrollbarsWidthHeight(elem) {
       var el = $(elem);
       if (addVScroll && addHScroll) {
@@ -312,7 +307,6 @@
         });
       }
     }
-
     function hideScrollbars(elem, vscroll, hscroll) {
       var el = $(elem);
       if (vscroll || hscroll) {
@@ -324,7 +318,6 @@
         resizeInnerWrap(el, el.find('.lb-wrap'));
       }
     }
-
     function resizeMainBox(elem) {
       var el = $(elem);
       el.css({
@@ -332,7 +325,6 @@
         height: el.height() + paddingTop + paddingBottom
       });
     }
-
     function movePadding(from, to) {
       var fromEl = $(from);
       var toEl = $(to);
@@ -346,7 +338,6 @@
         'padding-right': paddingRight + 'px'
       });
     }
-
     function resizeInnerWrap(main, child) {
       var mainEl = $(main);
       var childEl = $(child);
@@ -358,7 +349,6 @@
         height: mainEl.height() + hScrollWidth - paddingTop - paddingBottom
       });
     }
-
     function setVScrollbarWidth(elem) {
       var el = $(elem);
       el.css({
@@ -369,7 +359,6 @@
         "overflow": 'hidden'
       });
     }
-
     function setHScrollbarWidth(elem) {
       var el = $(elem);
       el.css({
@@ -380,7 +369,6 @@
         "overflow": 'hidden'
       });
     }
-
     function wrap(elem, vscroll, hscroll) {
       var el = $(elem);
       var elemId = el.attr('id');
@@ -404,7 +392,6 @@
       // preparation for the next element
       id = id + 1;
     }
-
     function needScrollbars(elem) {
       var el = $(elem);
       addVScroll = false;
@@ -431,7 +418,6 @@
         return true;
       }
     }
-
     function getPadding(elem) {
       var el = $(elem);
       paddingTop = parseInt(el.css('padding-top').replace('px', ''));
@@ -439,7 +425,6 @@
       paddingBottom = parseInt(el.css('padding-bottom').replace('px', ''));
       paddingRight = parseInt(el.css('padding-right').replace('px', ''));
     }
-
     function getBorders(elem) {
       var el = $(elem);
       borderTop = parseInt(el.css('border-top-width').replace('px', ''));
@@ -447,7 +432,6 @@
       borderBottom = parseInt(el.css('border-bottom-width').replace('px', ''));
       borderLeft = parseInt(el.css('border-left-width').replace('px', ''));
     }
-
     function getDimentions(elem, scroll, update) {
       var el = $(elem).get(0);
       if (update) {
